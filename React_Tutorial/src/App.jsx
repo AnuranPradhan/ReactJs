@@ -3,16 +3,32 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-
+function nameFunction(name){
+  return <h1>Hello,{name}</h1>;
+}
+function Greeting(isMorning){
+  if(isMorning){
+    return <h1>Good Morning</h1>
+  }else{
+    return <h1>Good Night</h1>
+  }
+}
 function App() {
-  
-const element =<h1>Hello world</h1>
+  const now = new Date();
+  const isMorning =now.getHours()<12;
 
-  return (
-    <div>
-     {element}
-    </div>
-  )
+const isLoggedIn = true;
+const element = <h1>{isLoggedIn?"Welcome Back":"Please Log on"}</h1>
+const message =["1","2"];
+
+return (
+  <>
+  {element}
+  {message.length>0 && <p>You Have {message.length} message </p>}
+  {nameFunction("Ravi")}
+  {Greeting(isMorning)}
+  </>
+)
 }
 
 export default App
