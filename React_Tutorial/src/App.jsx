@@ -1,5 +1,6 @@
 import MyButton from './Components/MyButton'
 import './App.css'
+import ProfileCard from './ProfileCard';
 
 function nameFunction(name){
   return <h1>Hello,{name}</h1>;
@@ -12,6 +13,7 @@ function Greeting(isMorning){
   }
 }
 function App() {
+  const hobby1=['Reading','Coding'];
   const now = new Date();
   const isMorning =now.getHours()<12;
 
@@ -26,6 +28,8 @@ return (
   {nameFunction("Ravi")}
   {Greeting(isMorning)}
   <MyButton/>
+  <ProfileCard name="Anuran Pradhan" age={20}num={2} isMember={true} hobbies={hobby1}/>
+    <ProfileCard name="Anuran Pradhan" age={21} num="2" isMember={false}  hobbies={hobby1}/>
   </>
 )
 }
