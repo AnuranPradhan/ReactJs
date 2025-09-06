@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import MyButton from './Components/MyButton'
 import './App.css'
 
 function nameFunction(name){
@@ -27,6 +25,7 @@ return (
   {message.length>0 && <p>You Have {message.length} message </p>}
   {nameFunction("Ravi")}
   {Greeting(isMorning)}
+  <MyButton/>
   </>
 )
 }
